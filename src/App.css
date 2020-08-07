@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.player {
+  padding: 50px;
+  width: 50%;
+  display: inline-block;
+}
+
+.fadeOut {
+  animation: FadeAnimation 0.5s ease-in 0.9s forwards;
+}
+
+@keyframes FadeAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.moveStatus {
+  padding-top: 40px;
+}
+
+.winner h1 {
+  padding: 50px;
+  font-size: 58px;
+}
+
+.dice {
+  background-repeat: no-repeat;
+  height: 150px;
+  display: inline-block;
+  margin: 5%;
+  width: 110px;
+}
+
+.dice_1 {
+  background-image: url("./img/Dice_1.png");
+}
+
+.dice_2 {
+  background-image: url("./img/Dice_2.png");
+}
+
+.dice_3 {
+  background-image: url("./img/Dice_3.png");
+}
+
+.dice_4 {
+  background-image: url("./img/Dice_4.png");
+}
+
+.dice_5 {
+  background-image: url("./img/Dice_5.png");
+}
+
+.dice_6 {
+  background-image: url("./img/Dice_6.png");
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-150px, -50px, 150px);
+    background-image: url("./img/Dice_6.png");
+  }
+
+  20%,
+  80% {
+    transform: translate3d(15px, 50, -155px);
+    background-image: url("./img/Dice_5.png");
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-50px, -100px, 100);
+    background-image: url("./img/Dice_3.png");
+  }
+
+  40%,
+  60% {
+    transform: translate3d(50px, -100px, 0);
+    background-image: url("./img/Dice_5.png");
+  }
+}
+
+@keyframes reverse_shake {
+  10%,
+  90% {
+    transform: translate3d(-0px, -50px, 150px);
+    background-image: url("./img/Dice_4.png");
+  }
+
+  20%,
+  80% {
+    transform: translate3d(15px, 50, 55px);
+    background-image: url("./img/Dice_3.png");
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(50px, 100px, 100);
+    background-image: url("./img/Dice_2.png");
+  }
+
+  40%,
+  60% {
+    transform: translate3d(50px, 100px, 0);
+    background-image: url("./img/Dice_1.png");
+  }
+}
+
+.shake_dice {
+  animation: shake 0.2s;
+}
+
+.shake_dice_reverse {
+  animation: reverse_shake 0.2s;
+}
